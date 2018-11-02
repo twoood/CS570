@@ -21,37 +21,25 @@ namespace CS570_Server
         private static List<_con_client> _clientList = new List<_con_client>();
         private static Socket primary_socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         private readonly UdpClient udp = new UdpClient(2018);
-
+        private IPAddress ip = IPAddress.Any;
+        
         
 
-        private void UDP_listen()
+        
+        private static void UDP_Server()
         {
-            Console.WriteLine("Running UDP");
-            this.udp.BeginReceive(UDP_Receive, new object());
+        var Server = new UdpClient(2018);
+        string ip_string = ((IPEndPoint)(primary_socket.RemoteEndPoint)).Address.ToString();
+        var ResponseData = Encoding.ASCII.GetBytes(ip_string + ":" + 7000);
+        while (true)
+        {
+        var ClientEp = new IPEndPoint(IPAddress.Any, 0);
+        var ClientRequestData = Server.Receive(ref ClientEp);
+        var ClientRequest = Encoding.ASCII.GetString(ClientRequestData);
 
+        Console.WriteLine("Recived {0} from {1}, sending response", ClientRequest, ClientEp.Address.ToString());
+        Server.Send(ResponseData, ResponseData.Length, ClientEp);
         }
-        private void UDP_Receive(IAsyncResult ar)
-        {
-            IPEndPoint ip = new IPEndPoint(IPAddress.Any, 2018);
-            byte[] bytes = udp.EndReceive(ar, ref ip);
-            string message = Encoding.ASCII.GetString(bytes);
-            while (message != "connect")
-            {
-                UDP_listen();
-            }
-            Console.WriteLine(message);
-            if (message == "connect")
-            {
-
-            }
-        }
-        private static void ReachOut()
-        {
-            UdpClient client = new UdpClient();
-            IPEndPoint ip = new IPEndPoint(IPAddress.Broadcast, 2018);
-            byte[] bytes = Encoding.ASCII.GetBytes("connect");
-            client.Send(bytes, bytes.Length, ip);
-            client.Close();
         }
 
 
@@ -60,8 +48,7 @@ namespace CS570_Server
         static void Main(string[] args)
         {
             Console.Title = "Multiple Client Server";
-            Program U = new Program();
-            U.UDP_listen();
+            UDP_Server();
             InitializeServer();
             Console.ReadLine();
 
