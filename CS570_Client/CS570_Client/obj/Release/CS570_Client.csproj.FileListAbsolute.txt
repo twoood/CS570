@@ -1,0 +1,6 @@
+C:\Users\tpw0007\Documents\Visual Studio 2012\Projects\CS570_Client\CS570_Client\bin\Release\CS570_Client.exe.config
+C:\Users\tpw0007\Documents\Visual Studio 2012\Projects\CS570_Client\CS570_Client\bin\Release\CS570_Client.exe
+C:\Users\tpw0007\Documents\Visual Studio 2012\Projects\CS570_Client\CS570_Client\bin\Release\CS570_Client.pdb
+C:\Users\tpw0007\Documents\Visual Studio 2012\Projects\CS570_Client\CS570_Client\obj\Release\CS570_Client.exe
+C:\Users\tpw0007\Documents\Visual Studio 2012\Projects\CS570_Client\CS570_Client\obj\Release\CS570_Client.pdb
+C:\Users\tpw0007\Documents\Visual Studio 2012\Projects\CS570_Client\CS570_Client\obj\Release\CS570_Client.csprojResolveAssemblyReference.cache
