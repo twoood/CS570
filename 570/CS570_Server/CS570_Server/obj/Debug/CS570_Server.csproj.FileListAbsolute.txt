@@ -1,0 +1,6 @@
+c:\users\tpw0007\documents\visual studio 2012\Projects\CS570_Server\CS570_Server\bin\Debug\CS570_Server.exe.config
+c:\users\tpw0007\documents\visual studio 2012\Projects\CS570_Server\CS570_Server\bin\Debug\CS570_Server.exe
+c:\users\tpw0007\documents\visual studio 2012\Projects\CS570_Server\CS570_Server\bin\Debug\CS570_Server.pdb
+c:\users\tpw0007\documents\visual studio 2012\Projects\CS570_Server\CS570_Server\obj\Debug\CS570_Server.csprojResolveAssemblyReference.cache
+c:\users\tpw0007\documents\visual studio 2012\Projects\CS570_Server\CS570_Server\obj\Debug\CS570_Server.exe
+c:\users\tpw0007\documents\visual studio 2012\Projects\CS570_Server\CS570_Server\obj\Debug\CS570_Server.pdb
