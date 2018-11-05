@@ -1,0 +1,12 @@
+c:\users\jmw0055\documents\visual studio 2012\Projects\Server\Server\bin\Debug\Server.exe.config
+c:\users\jmw0055\documents\visual studio 2012\Projects\Server\Server\bin\Debug\Server.exe
+c:\users\jmw0055\documents\visual studio 2012\Projects\Server\Server\bin\Debug\Server.pdb
+c:\users\jmw0055\documents\visual studio 2012\Projects\Server\Server\obj\Debug\Server.exe
+c:\users\jmw0055\documents\visual studio 2012\Projects\Server\Server\obj\Debug\Server.pdb
+c:\users\jmw0055\documents\visual studio 2012\Projects\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\jared\Downloads\Server\Server\Server\bin\Debug\Server.exe.config
+C:\Users\jared\Downloads\Server\Server\Server\obj\Debug\Server.exe
+C:\Users\jared\Downloads\Server\Server\Server\obj\Debug\Server.pdb
+C:\Users\jared\Downloads\Server\Server\Server\bin\Debug\Server.exe
+C:\Users\jared\Downloads\Server\Server\Server\bin\Debug\Server.pdb
+C:\Users\jared\Downloads\Server\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
