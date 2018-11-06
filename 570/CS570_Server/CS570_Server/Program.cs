@@ -20,19 +20,50 @@ namespace CS570_Server
         private static byte[] buff = new byte[1024];
         private static List<_con_client> _clientList = new List<_con_client>();
         private static Socket primary_socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        private readonly UdpClient udp = new UdpClient(2018);
+        
+        
+        
+
+        
+        private static void UDP_Server()
+        {
+            var Server = new UdpClient(2018);
+            string ip = "127.0.0.4";
+            var ResponseData = Encoding.ASCII.GetBytes(ip + ":" + 7000);
+            string ClientRequest;
+            do 
+            {
+                var ClientEp = new IPEndPoint(IPAddress.Any, 0);
+                var ClientRequestData = Server.Receive(ref ClientEp);
+                ClientRequest = Encoding.ASCII.GetString(ClientRequestData);
+
+                Console.WriteLine("Received {0} from {1}, sending response", ClientRequest, ClientEp.Address.ToString());
+                Server.Send(ResponseData, ResponseData.Length, ClientEp);
+            }
+            while (ClientRequest != "connect");
+        }
+
+
+  
 
         static void Main(string[] args)
         {
             Console.Title = "Multiple Client Server";
+                    
+            UDP_Server();
             InitializeServer();
+            
             Console.ReadLine();
 
         }
-        // function to initialize the server
+
         private static void InitializeServer()
         {
+            string my_ip = "127.0.0.4";
+            IPAddress the_ip = IPAddress.Parse(my_ip);
             Console.WriteLine("Server Initialization...");
-            primary_socket.Bind(new IPEndPoint(IPAddress.Any, 7000));   // bind primary socket to any ip address with port 7000
+            primary_socket.Bind(new IPEndPoint(the_ip, 7000));   // bind primary socket to any ip address with port 7000
 
             primary_socket.Listen(4);   // Listen with a max of 4 queued clients
 
@@ -214,4 +245,5 @@ namespace CS570_Server
         public Socket _c_sock { get; set; }
 
     }
+
 }
