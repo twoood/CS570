@@ -56,7 +56,8 @@ namespace CS570_Server
                 temp._c_sock = (Socket)a_sock;  // store socket of client
                 string welcome = "Welcome, Client: " + temp.id;  // welcome string for client
                 ClientToClient(welcome, a_sock); // sent welcome string to client
-   
+								string coupon = "---------------------------------\n|            COUPON               |\n ---------------------------------\n|                                 |\n|         BOGO MATTRESSES!        |\n|                                 |\n ---------------------------------\n| Expires 11/25/2018              |\n ---------------------------------\n"; 
+								ClientToClient(coupon, a_sock); // sent welcome string to client
                 _clientList.Add(temp);  // add this new _con_client to list
                 Console.WriteLine("\nNew Client : " + temp.id.ToString() + " " + temp.ip);    // print to server the id and ip of new client
 
