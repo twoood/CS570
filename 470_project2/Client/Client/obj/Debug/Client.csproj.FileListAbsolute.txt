@@ -1,0 +1,24 @@
+c:\users\jmw0055\documents\visual studio 2012\Projects\Client\Client\bin\Debug\Client.exe.config
+c:\users\jmw0055\documents\visual studio 2012\Projects\Client\Client\bin\Debug\Client.exe
+c:\users\jmw0055\documents\visual studio 2012\Projects\Client\Client\bin\Debug\Client.pdb
+c:\users\jmw0055\documents\visual studio 2012\Projects\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+c:\users\jmw0055\documents\visual studio 2012\Projects\Client\Client\obj\Debug\Client.exe
+c:\users\jmw0055\documents\visual studio 2012\Projects\Client\Client\obj\Debug\Client.pdb
+C:\Users\jared\Downloads\Client\Client\Client\bin\Debug\Client.exe.config
+C:\Users\jared\Downloads\Client\Client\Client\obj\Debug\Client.exe
+C:\Users\jared\Downloads\Client\Client\Client\obj\Debug\Client.pdb
+C:\Users\jared\Downloads\Client\Client\Client\bin\Debug\Client.exe
+C:\Users\jared\Downloads\Client\Client\Client\bin\Debug\Client.pdb
+C:\Users\jared\Downloads\Client\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\jmw0055\Downloads\Client\Client\Client\bin\Debug\Client.exe.config
+C:\Users\jmw0055\Downloads\Client\Client\Client\obj\Debug\Client.exe
+C:\Users\jmw0055\Downloads\Client\Client\Client\obj\Debug\Client.pdb
+C:\Users\jmw0055\Downloads\Client\Client\Client\bin\Debug\Client.exe
+C:\Users\jmw0055\Downloads\Client\Client\Client\bin\Debug\Client.pdb
+C:\Users\jmw0055\Downloads\Client\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\jared\Downloads\NewClient\Client\Client\Client\bin\Debug\Client.exe.config
+C:\Users\jared\Downloads\NewClient\Client\Client\Client\obj\Debug\Client.exe
+C:\Users\jared\Downloads\NewClient\Client\Client\Client\obj\Debug\Client.pdb
+C:\Users\jared\Downloads\NewClient\Client\Client\Client\bin\Debug\Client.exe
+C:\Users\jared\Downloads\NewClient\Client\Client\Client\bin\Debug\Client.pdb
+C:\Users\jared\Downloads\NewClient\Client\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
