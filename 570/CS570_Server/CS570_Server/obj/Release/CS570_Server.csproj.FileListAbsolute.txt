@@ -3,3 +3,4 @@ C:\Users\tpw0007\Documents\Visual Studio 2012\Projects\CS570_Server\CS570_Server
 C:\Users\tpw0007\Documents\Visual Studio 2012\Projects\CS570_Server\CS570_Server\bin\Release\CS570_Server.pdb
 C:\Users\tpw0007\Documents\Visual Studio 2012\Projects\CS570_Server\CS570_Server\obj\Release\CS570_Server.exe
 C:\Users\tpw0007\Documents\Visual Studio 2012\Projects\CS570_Server\CS570_Server\obj\Release\CS570_Server.pdb
+C:\Users\tpw0007\Documents\Visual Studio 2012\Projects\CS570_Server\CS570_Server\obj\Release\CS570_Server.csprojResolveAssemblyReference.cache

@@ -22,17 +22,31 @@ namespace CS570_Client
         private static System.Timers.Timer aTimer;
         private static byte[] rec_buff = new byte[1024];
         private static int rec_n = 0;
+        private byte[] rec_msg = new byte[1024];
+     
+
+
+
 
 
         static void Main(string[] args)
         {
             Console.Title = "Client";
-            ConstantConnect();// constantly connect loop
-            SendMessage();// send message loop
+            the_server my_server = new the_server();
+            string connection_information = ReachOut();
+            int position = connection_information.IndexOf(':');
+            string temp = connection_information.Substring(position + 1);
+            Console.WriteLine(temp);
+            int port = Int32.Parse(temp);
+            my_server.port = port;
+            string the_ip = connection_information.Substring(0, position);
+            my_server.ip = the_ip;
+            ConstantConnect(my_server);// constantly connect loop
+            SendMessage(my_server);// send message loop
             //Console.Read();
         }
 
-        private static void SendMessage()
+        private static void SendMessage(the_server server)
         {
             // setup new timer to 1 second
             aTimer = new System.Timers.Timer(1000);
@@ -74,7 +88,6 @@ namespace CS570_Client
             {
                 int errCode = sockex.ErrorCode;
                 Console.WriteLine(errCode.ToString());
-                ConstantConnect();
 
             }
             if (rec_n > 0)// if data was received, then convert the byte array to a string and print output
@@ -86,7 +99,7 @@ namespace CS570_Client
             return;
         }
         // function to constantly try to connect the client, and will loop until client is connected
-        private static void ConstantConnect()
+        private static void ConstantConnect(the_server server)
         {
             int connection_attempts = 0;
             while (!mysock.Connected)
@@ -95,7 +108,7 @@ namespace CS570_Client
                 try
                 {
                     connection_attempts++;
-                    mysock.Connect(IPAddress.Loopback, 7000);// hardcoded the loopback address, same port as server
+                    mysock.Connect(IPAddress.Parse(server.ip), server.port);// hardcoded the loopback address, same port as server
                 }
                 catch (SocketException) // if doesn't successfully connect, then print the number of connection attempts
                 {
@@ -114,5 +127,29 @@ namespace CS570_Client
             mysock.Shutdown(SocketShutdown.Both);
             Environment.Exit(0);
         }
+
+        private static string ReachOut()
+        {
+            var ServerEp = new IPEndPoint(IPAddress.Any, 0);
+            UdpClient client = new UdpClient();
+            IPEndPoint ip = new IPEndPoint(IPAddress.Broadcast, 2018);
+            byte[] bytes = Encoding.ASCII.GetBytes("connect");
+            client.Send(bytes, bytes.Length, ip);
+            var ServerResponseData = client.Receive(ref ServerEp);
+            var ServerResponse = Encoding.ASCII.GetString(ServerResponseData);
+            string the_response = ServerResponse;
+            Console.WriteLine("Recived {0} from {1}", ServerResponse, ServerEp.Address.ToString());
+            client.Close();
+            return the_response;
+        }
+
+        class the_server
+        {
+            public int port { get; set; }
+            public string ip { get; set; }
+
+
+        }
     }
+
 }

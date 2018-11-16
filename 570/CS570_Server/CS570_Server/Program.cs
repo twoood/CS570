@@ -20,19 +20,55 @@ namespace CS570_Server
         private static byte[] buff = new byte[1024];
         private static List<_con_client> _clientList = new List<_con_client>();
         private static Socket primary_socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        private readonly UdpClient udp = new UdpClient(2018);
+        
+        
+        
+
+        
+        private static void UDP_Server(string ip)
+        {
+            var Server = new UdpClient(2018);
+            int attempt = 0;
+
+            string ClientRequest;
+            do 
+            {
+                attempt++;
+                Console.WriteLine("Attempt " + attempt);
+                var ClientEp = new IPEndPoint(IPAddress.Any, 0);
+                var ClientRequestData = Server.Receive(ref ClientEp);
+                ClientRequest = Encoding.ASCII.GetString(ClientRequestData);
+                var ResponseData = Encoding.ASCII.GetBytes(ip + ":" + 7000);
+                Console.WriteLine("Received {0} from {1}, sending response", ClientRequest, ClientEp.Address.ToString());
+                Server.Send(ResponseData, ResponseData.Length, ClientEp);
+            }
+            while (ClientRequest != "connect");
+        }
+
+
+  
 
         static void Main(string[] args)
         {
             Console.Title = "Multiple Client Server";
-            InitializeServer();
+            Console.WriteLine("Initializing");
+            IPHostEntry ipEntry = Dns.Resolve(Dns.GetHostName());
+            IPAddress addr = ipEntry.AddressList[1];// If you use the first address, you will end up with loopback, so choose second address
+            string the_ip = addr.ToString();
+            Console.WriteLine("IP: " + the_ip);
+            UDP_Server(the_ip);
+            InitializeServer(the_ip);
+            
             Console.ReadLine();
 
         }
-        // function to initialize the server
-        private static void InitializeServer()
+
+        private static void InitializeServer(string ip)
         {
+            IPAddress my_ip = IPAddress.Parse(ip);
             Console.WriteLine("Server Initialization...");
-            primary_socket.Bind(new IPEndPoint(IPAddress.Any, 7000));   // bind primary socket to any ip address with port 7000
+            primary_socket.Bind(new IPEndPoint(my_ip, 7000));   // bind primary socket to any ip address with port 7000
 
             primary_socket.Listen(4);   // Listen with a max of 4 queued clients
 
@@ -54,10 +90,10 @@ namespace CS570_Server
                 temp.id = randomNumber; // store random id assigned to client
                 temp.ip = ((IPEndPoint)(a_sock.RemoteEndPoint)).Address.ToString(); // store ip address of client
                 temp._c_sock = (Socket)a_sock;  // store socket of client
-                string welcome = "Welcome, Client: " + temp.id;  // welcome string for client
+                string welcome = "\nWelcome to Sleepytime with Tom and Andy, Client: " + temp.id + "\n";  // welcome string for client
                 ClientToClient(welcome, a_sock); // sent welcome string to client
-								string coupon = "---------------------------------\n|            COUPON               |\n ---------------------------------\n|                                 |\n|         BOGO MATTRESSES!        |\n|                                 |\n ---------------------------------\n| Expires 11/25/2018              |\n ---------------------------------\n"; 
-								ClientToClient(coupon, a_sock); // sent welcome string to client
+                string coupon = "---------------------------------\n|            COUPON               |\n ---------------------------------\n|                                 |\n|         BOGO MATTRESSES!        |\n|                                 |\n ---------------------------------\n| Expires 11/25/2018              |\n ---------------------------------\n";
+                ClientToClient(coupon, a_sock); // send coupon to client
                 _clientList.Add(temp);  // add this new _con_client to list
                 Console.WriteLine("\nNew Client : " + temp.id.ToString() + " " + temp.ip);    // print to server the id and ip of new client
 
@@ -215,4 +251,7 @@ namespace CS570_Server
         public Socket _c_sock { get; set; }
 
     }
+
+    
+
 }
