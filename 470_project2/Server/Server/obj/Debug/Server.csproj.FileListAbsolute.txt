@@ -1,0 +1,30 @@
+c:\users\jmw0055\documents\visual studio 2012\Projects\Server\Server\bin\Debug\Server.exe.config
+c:\users\jmw0055\documents\visual studio 2012\Projects\Server\Server\bin\Debug\Server.exe
+c:\users\jmw0055\documents\visual studio 2012\Projects\Server\Server\bin\Debug\Server.pdb
+c:\users\jmw0055\documents\visual studio 2012\Projects\Server\Server\obj\Debug\Server.exe
+c:\users\jmw0055\documents\visual studio 2012\Projects\Server\Server\obj\Debug\Server.pdb
+c:\users\jmw0055\documents\visual studio 2012\Projects\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\jared\Downloads\Server\Server\Server\bin\Debug\Server.exe.config
+C:\Users\jared\Downloads\Server\Server\Server\obj\Debug\Server.exe
+C:\Users\jared\Downloads\Server\Server\Server\obj\Debug\Server.pdb
+C:\Users\jared\Downloads\Server\Server\Server\bin\Debug\Server.exe
+C:\Users\jared\Downloads\Server\Server\Server\bin\Debug\Server.pdb
+C:\Users\jared\Downloads\Server\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\jmw0055\Downloads\Server\Server\Server\bin\Debug\Server.exe.config
+C:\Users\jmw0055\Downloads\Server\Server\Server\obj\Debug\Server.exe
+C:\Users\jmw0055\Downloads\Server\Server\Server\obj\Debug\Server.pdb
+C:\Users\jmw0055\Downloads\Server\Server\Server\bin\Debug\Server.exe
+C:\Users\jmw0055\Downloads\Server\Server\Server\bin\Debug\Server.pdb
+C:\Users\jmw0055\Downloads\Server\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\jared\Downloads\NewServer\Server\Server\Server\bin\Debug\Server.exe.config
+C:\Users\jared\Downloads\NewServer\Server\Server\Server\obj\Debug\Server.exe
+C:\Users\jared\Downloads\NewServer\Server\Server\Server\obj\Debug\Server.pdb
+C:\Users\jared\Downloads\NewServer\Server\Server\Server\bin\Debug\Server.exe
+C:\Users\jared\Downloads\NewServer\Server\Server\Server\bin\Debug\Server.pdb
+C:\Users\jared\Downloads\NewServer\Server\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\jared\OneDrive\Documents\CS470\CS570-jared_client_and_ser\CS570-jared_client_and_ser\470_project2\Server\Server\bin\Debug\Server.exe.config
+C:\Users\jared\OneDrive\Documents\CS470\CS570-jared_client_and_ser\CS570-jared_client_and_ser\470_project2\Server\Server\obj\Debug\Server.exe
+C:\Users\jared\OneDrive\Documents\CS470\CS570-jared_client_and_ser\CS570-jared_client_and_ser\470_project2\Server\Server\obj\Debug\Server.pdb
+C:\Users\jared\OneDrive\Documents\CS470\CS570-jared_client_and_ser\CS570-jared_client_and_ser\470_project2\Server\Server\bin\Debug\Server.exe
+C:\Users\jared\OneDrive\Documents\CS470\CS570-jared_client_and_ser\CS570-jared_client_and_ser\470_project2\Server\Server\bin\Debug\Server.pdb
+C:\Users\jared\OneDrive\Documents\CS470\CS570-jared_client_and_ser\CS570-jared_client_and_ser\470_project2\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
